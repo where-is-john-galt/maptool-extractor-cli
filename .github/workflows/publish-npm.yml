@@ -1,5 +1,6 @@
 # Publishes to npm on every push to main: runs tests, bumps patch version, publishes,
-# then commits the version bump and tag (commit message contains [skip ci] so this workflow does not re-run).
+# then commits the version bump and tag, pushes the tag, and creates a matching GitHub Release
+# (commit message contains [skip ci] so this workflow does not re-run).
 #
 # Repository secrets (Settings → Secrets and variables → Actions):
 #   NPM_TOKEN — npm access token with "Automation" (classic) or publish permission (granular).
@@ -75,3 +76,10 @@ jobs:
           git tag "v${VERSION}"
           git push origin HEAD:main
           git push origin "v${VERSION}"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
