@@ -44,6 +44,20 @@ jobs:
       - name: Bump patch version
         run: npm version patch --no-git-tag-version
 
+      - name: Assert package.json repository for npm provenance
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const p = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          const raw = p.repository;
+          const url = typeof raw === 'string' ? raw : raw && raw.url;
+          if (!url || String(url).trim() === '') {
+            console.error('package.json must set repository (non-empty) so npm --provenance can match GitHub.');
+            process.exit(1);
+          }
+          console.log('repository:', url);
+          NODE
+
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

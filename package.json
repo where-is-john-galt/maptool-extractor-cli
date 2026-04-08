@@ -4,6 +4,12 @@
   "description": "Unpack and pack MapTool .cmpgn campaigns for macro editing",
   "type": "module",
   "main": "./dist/cli.js",
+  "exports": {
+    ".": {
+      "types": "./dist/cli.d.ts",
+      "default": "./dist/cli.js"
+    }
+  },
   "bin": {
     "maptool-extractor": "./dist/cli.js"
   },
@@ -28,9 +34,10 @@
     "macro"
   ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/where-is-john-galt/maptool-extractor-cli"
+  "repository": "github:where-is-john-galt/maptool-extractor-cli",
+  "homepage": "https://github.com/where-is-john-galt/maptool-extractor-cli#readme",
+  "bugs": {
+    "url": "https://github.com/where-is-john-galt/maptool-extractor-cli/issues"
   },
   "dependencies": {
     "adm-zip": "^0.5.16",
