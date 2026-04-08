@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
@@ -11,6 +12,13 @@ import AdmZip from "adm-zip";
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cli = path.join(root, "dist/cli.js");
 const fixtureXml = path.join(root, "test/fixtures/minimal-content.xml");
+
+test("cli --version matches package.json", () => {
+  const expected = JSON.parse(readFileSync(path.join(root, "package.json"), "utf8")).version;
+  const r = spawnSync(process.execPath, [cli, "--version"], { encoding: "utf8" });
+  assert.equal(r.status, 0, r.stderr);
+  assert.equal(r.stdout.trim(), expected);
+});
 
 test("cli unpack → macro list → pack", async () => {
   const tmp = await fs.mkdtemp(path.join(os.tmpdir(), "maptool-extractor-cli-"));

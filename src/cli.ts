@@ -6,13 +6,14 @@ import { Command } from "commander";
 import { runMacroList } from "./commands/macro-list.js";
 import { runPack } from "./commands/pack.js";
 import { runUnpack } from "./commands/unpack.js";
+import { readPackageVersion } from "./util/package-meta.js";
 
 async function main(): Promise<void> {
   const program = new Command();
   program
     .name("maptool-extractor")
     .description("MapTool .cmpgn macro unpack/pack CLI")
-    .version("0.1.0");
+    .version(readPackageVersion());
 
   program
     .command("unpack")
