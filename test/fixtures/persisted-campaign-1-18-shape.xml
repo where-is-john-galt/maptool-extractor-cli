@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net.rptools.maptool.util.PersistenceUtil$PersistedCampaign>
+  <campaign>
+    <name>FromPersistedWrapper</name>
+    <campaignProperties/>
+    <macroButtonProperties/>
+    <gmMacroButtonProperties/>
+    <zones class="linked-hash-map"/>
+  </campaign>
+  <assetMap class="linked-hash-map"/>
+  <mapToolVersion>1.18.4</mapToolVersion>
+</net.rptools.maptool.util.PersistenceUtil$PersistedCampaign>

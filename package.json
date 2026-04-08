@@ -1,0 +1,42 @@
+{
+  "name": "maptool-extractor-cli",
+  "version": "0.1.0",
+  "description": "Unpack and pack MapTool .cmpgn campaigns for macro editing",
+  "type": "module",
+  "main": "./dist/cli.js",
+  "bin": {
+    "maptool-extractor": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "dev": "tsc -w -p tsconfig.json",
+    "unpack:test-campaign": "node scripts/unpack-test-campaign.mjs",
+    "pack:test-campaign": "npm run build && node scripts/pack-test-campaign.mjs"
+  },
+  "keywords": [
+    "maptool-extractor",
+    "maptool",
+    "cmpgn",
+    "macro"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "commander": "^12.1.0",
+    "fast-xml-parser": "^4.5.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.7",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

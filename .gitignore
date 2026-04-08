@@ -1,0 +1,5 @@
+node_modules/
+dist/
+test/test_campain_work/
+*.log
+.DS_Store

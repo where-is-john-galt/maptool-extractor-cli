@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net.rptools.maptool.model.Campaign>
+  <name>Fixture</name>
+  <macroButtonProperties>
+    <net.rptools.maptool.model.MacroButtonProperties>
+      <macroUUID>00000000-0000-4000-8000-000000000001</macroUUID>
+      <index>0</index>
+      <colorKey>default</colorKey>
+      <hotKey>None</hotKey>
+      <command>say Hello</command>
+      <label>Ping</label>
+      <group></group>
+      <sortby></sortby>
+      <autoExecute>false</autoExecute>
+      <includeLabel>false</includeLabel>
+      <applyToTokens>false</applyToTokens>
+      <fontColorKey>black</fontColorKey>
+      <fontSize>1.00em</fontSize>
+      <minWidth></minWidth>
+      <maxWidth></maxWidth>
+      <allowPlayerEdits>true</allowPlayerEdits>
+      <toolTip></toolTip>
+      <displayHotKey>true</displayHotKey>
+    </net.rptools.maptool.model.MacroButtonProperties>
+  </macroButtonProperties>
+  <gmMacroButtonProperties/>
+  <zones class="linked-hash-map">
+    <entry>
+      <net.rptools.maptool.model.GUID>
+        <baGUID>0123456789ABCDEF0123456789ABCDEF</baGUID>
+      </net.rptools.maptool.model.GUID>
+      <net.rptools.maptool.model.Zone>
+        <name>Map1</name>
+        <tokenMap class="linked-hash-map">
+          <entry>
+            <net.rptools.maptool.model.GUID>
+              <baGUID>ABCDEF0123456789ABCDEF0123456789</baGUID>
+            </net.rptools.maptool.model.GUID>
+            <net.rptools.maptool.model.Token>
+              <id class="net.rptools.maptool.model.GUID">
+                <baGUID>ABCDEF0123456789ABCDEF0123456789</baGUID>
+              </id>
+              <name>Hero</name>
+              <macroPropertiesMap class="linked-hash-map">
+                <entry>
+                  <int>0</int>
+                  <net.rptools.maptool.model.MacroButtonProperties>
+                    <macroUUID>22222222-2222-4222-8222-222222222222</macroUUID>
+                    <index>0</index>
+                    <colorKey>default</colorKey>
+                    <hotKey>None</hotKey>
+                    <command>token macro</command>
+                    <label>Act</label>
+                    <group></group>
+                    <sortby></sortby>
+                    <autoExecute>false</autoExecute>
+                    <includeLabel>false</includeLabel>
+                    <applyToTokens>false</applyToTokens>
+                    <fontColorKey>black</fontColorKey>
+                    <fontSize>1.00em</fontSize>
+                    <minWidth></minWidth>
+                    <maxWidth></maxWidth>
+                    <allowPlayerEdits>true</allowPlayerEdits>
+                    <toolTip></toolTip>
+                    <displayHotKey>true</displayHotKey>
+                  </net.rptools.maptool.model.MacroButtonProperties>
+                </entry>
+                <entry>
+                  <int>1</int>
+                  <net.rptools.maptool.model.MacroButtonProperties>
+                    <macroUUID>33333333-3333-4333-8333-333333333333</macroUUID>
+                    <index>1</index>
+                    <colorKey>default</colorKey>
+                    <hotKey>None</hotKey>
+                    <command>sheet body</command>
+                    <label>Sheet</label>
+                    <group>Karta postaci</group>
+                    <sortby></sortby>
+                    <autoExecute>false</autoExecute>
+                    <includeLabel>false</includeLabel>
+                    <applyToTokens>false</applyToTokens>
+                    <fontColorKey>black</fontColorKey>
+                    <fontSize>1.00em</fontSize>
+                    <minWidth></minWidth>
+                    <maxWidth></maxWidth>
+                    <allowPlayerEdits>true</allowPlayerEdits>
+                    <toolTip></toolTip>
+                    <displayHotKey>true</displayHotKey>
+                  </net.rptools.maptool.model.MacroButtonProperties>
+                </entry>
+              </macroPropertiesMap>
+            </net.rptools.maptool.model.Token>
+          </entry>
+        </tokenMap>
+      </net.rptools.maptool.model.Zone>
+    </entry>
+  </zones>
+</net.rptools.maptool.model.Campaign>
