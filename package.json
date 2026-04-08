@@ -30,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/where-is-john-galt/maptool-extractor-cli.git"
+    "url": "https://github.com/where-is-john-galt/maptool-extractor-cli"
   },
   "dependencies": {
     "adm-zip": "^0.5.16",
